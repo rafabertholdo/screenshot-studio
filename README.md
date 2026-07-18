@@ -154,6 +154,14 @@ styling you already did is reapplied to the fresh captures.
 
 - macOS 14+
 
+
+## Buy Me a Coffee ☕
+
+All my apps are completely free — no paywalls, no subscriptions. If they saved
+you time, a coffee helps me keep pushing updates and new features. Thank you!
+
+[**Buy Me a Coffee ☕**](https://www.buymeacoffee.com/rafabertholdo)
+
 ## Release notes
 
 ### v1.1 — current
