@@ -16,6 +16,21 @@ The workflow is two steps:
 2. **Open them in Screenshot Studio** to frame, caption, arrange, export, and
    upload the gallery.
 
+## Use it with a coding agent
+
+Install the agent skill into your app's repo and let Claude Code (or any
+skill-aware agent) drive the whole flow — capture with a UITest, then frame and
+upload:
+
+```bash
+npx screenshot-studio-skill        # installs into .claude/skills/
+npx screenshot-studio-skill --agents   # or into .agents/skills/
+```
+
+Then ask your agent: *"make App Store screenshots for this app."* The skill
+teaches it to write/run the capture UITest, extract the PNGs, and operate
+Screenshot Studio. See [`skill/SKILL.md`](skill/SKILL.md).
+
 ---
 
 ## Step 1 — Generate the raw screenshots (UITest)
