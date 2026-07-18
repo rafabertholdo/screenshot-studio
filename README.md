@@ -20,16 +20,24 @@ The workflow is two steps:
 
 Install the agent skill into your app's repo and let Claude Code (or any
 skill-aware agent) drive the whole flow — capture with a UITest, then frame and
-upload:
+upload. Then just ask: *"make App Store screenshots for this app."*
+
+**Option A — [skills.sh](https://skills.sh):**
 
 ```bash
-npx screenshot-studio-skill        # installs into .claude/skills/
-npx screenshot-studio-skill --agents   # or into .agents/skills/
+npx skills add https://github.com/rafabertholdo/screenshot-studio --skill screenshot-studio
 ```
 
-Then ask your agent: *"make App Store screenshots for this app."* The skill
-teaches it to write/run the capture UITest, extract the PNGs, and operate
-Screenshot Studio. See [`skill/SKILL.md`](skill/SKILL.md).
+**Option B — Claude Code plugin:**
+
+```
+/plugin marketplace add rafabertholdo/screenshot-studio
+/plugin install screenshot-studio
+```
+
+Either way the agent gets [`screenshot-studio/SKILL.md`](screenshot-studio/SKILL.md),
+which teaches it to write/run the capture UITest, extract the PNGs, and operate
+Screenshot Studio.
 
 ---
 

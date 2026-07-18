@@ -1,15 +1,9 @@
 {
   "name": "screenshot-studio-skill",
   "version": "1.0.0",
-  "description": "Install an agent skill that automates App Store screenshots with Screenshot Studio.",
-  "bin": {
-    "screenshot-studio-skill": "bin/cli.js"
-  },
-  "files": [
-    "bin",
-    "skill"
-  ],
+  "description": "Agent skill that automates App Store screenshots with Screenshot Studio.",
   "keywords": [
+    "pi-package",
     "app-store",
     "screenshots",
     "aso",
@@ -19,12 +13,14 @@
     "skill",
     "xcuitest"
   ],
+  "pi": {
+    "skills": [
+      "./screenshot-studio"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rafabertholdo/screenshot-studio.git"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=16"
-  }
+  "license": "MIT"
 }

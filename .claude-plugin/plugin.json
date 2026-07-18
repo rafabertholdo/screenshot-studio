@@ -1,0 +1,21 @@
+{
+  "name": "screenshot-studio",
+  "version": "1.0.0",
+  "description": "Capture App Store screenshots with an XCUITest and frame/upload them with Screenshot Studio.",
+  "author": {
+    "name": "Rafael Bertholdo",
+    "email": "rafabertholdo@gmail.com"
+  },
+  "repository": "https://github.com/rafabertholdo/screenshot-studio",
+  "license": "MIT",
+  "keywords": [
+    "app-store",
+    "screenshots",
+    "aso",
+    "ios",
+    "xcuitest"
+  ],
+  "skills": [
+    "./screenshot-studio"
+  ]
+}
