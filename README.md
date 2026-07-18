@@ -70,11 +70,15 @@ this is the background/style collection (gradients, mockup look) new screens sta
 from. Screens cycle through the template's looks so the gallery alternates layouts
 instead of repeating one. You can change any screen's look afterward.
 
+![New Project — name, template picker, and screenshots folder](docs/app-new-project.jpg)
+
 Then **import** the folder that holds your `iPhone/` and `iPad/` subfolders.
 Screenshot Studio pairs the shots by their numbered name and builds one **slide**
 per screen, ordered by the `NN-` prefix.
 
 ### Frame, caption, and arrange each slide
+
+![The editor with the NAM Loader project open](docs/app-editor.jpg)
 
 Select a slide in the sidebar and work on the canvas:
 
