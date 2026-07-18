@@ -157,10 +157,12 @@ styling you already did is reapplied to the fresh captures.
 
 ## Buy Me a Coffee ☕
 
-All my apps are completely free — no paywalls, no subscriptions. If they saved
+This app is completely free — no paywalls, no subscriptions. If they saved
 you time, a coffee helps me keep pushing updates and new features. Thank you!
 
 [**Buy Me a Coffee ☕**](https://www.buymeacoffee.com/rafabertholdo)
+
+<a href="https://www.buymeacoffee.com/rafabertholdo"><img src="docs/buymeacoffee-qr.png" alt="Buy Me a Coffee QR code" width="180"></a>
 
 ## Release notes
 
