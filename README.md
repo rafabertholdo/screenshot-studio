@@ -163,19 +163,3 @@ you time, a coffee helps me keep pushing updates and new features. Thank you!
 [**Buy Me a Coffee ☕**](https://www.buymeacoffee.com/rafabertholdo)
 
 <a href="https://www.buymeacoffee.com/rafabertholdo"><img src="docs/buymeacoffee-qr.png" alt="Buy Me a Coffee QR code" width="180"></a>
-
-## Release notes
-
-### v1.1 — current
-
-- **Direct App Store Connect upload** from the app: add your `.p8` key once (kept
-  in the login keychain), then publish a whole gallery to a version and locale.
-- **Pre-flight validation** — every size is checked against the 10-per-size limit
-  before your listing is touched, so a bad set never leaves it half-updated.
-- **Landscape screens** render as two side-by-side portrait panels.
-- Templates cycle across imported screens for a varied, consistent gallery.
-
-### v1.0
-
-- Initial editor: import a folder of simulator captures, caption them, frame them
-  in device mockups, and export PNGs at exact App Store sizes.
