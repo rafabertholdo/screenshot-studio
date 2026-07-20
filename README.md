@@ -115,10 +115,22 @@ Select a slide in the sidebar and work on the canvas:
 - **Preview both sizes** — toggle between the iPhone and iPad rendering. A screen
   captured for only one size falls back gracefully.
 
-Projects are saved automatically as small JSON files in
-`~/Documents/Screenshot Studio/` — just the folder path and the look of each
-screen, never the screenshots themselves. Re-opening a project re-reads the
-source folder, so adding a new capture there and reopening picks it up.
+Projects are saved automatically as one small JSON file per project in
+`~/Library/Application Support/screenshot-studio/`. The file stores the source
+folder path, screen styling, App Store Connect destination, and all
+localization data; screenshots themselves stay in the source folder. Version
+1.5 keeps the base locale, extra locales, and translated text overlays together
+in the same project file, so localized galleries do not need one project per
+language.
+
+On first launch, projects are migrated non-destructively from the old
+`~/Documents/Screenshot Studio/` folder. Legacy locale-suffixed project files
+are combined into the canonical project file, while the old files remain as a
+recovery source. Re-opening a project re-reads the source folder, so adding a
+new capture there and reopening picks it up.
+
+When multiple locales are configured, **Export** creates a subfolder for each
+locale and **Upload** publishes every locale in one action.
 
 ### Export
 

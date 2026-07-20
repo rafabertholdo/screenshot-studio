@@ -131,9 +131,25 @@ from https://github.com/rafabertholdo/screenshot-studio.
    sizes. **Don't resize or post-process the output** — App Store Connect
    validates the exact dimensions.
 
-Projects save as small JSON in `~/Documents/Screenshot Studio/` (a folder path
-plus the look of each screen). Re-opening re-reads the source folder, so a new
-capture there is picked up automatically.
+Projects save as one small JSON file per project in
+`~/Library/Application Support/screenshot-studio/` (a folder path, the look of
+each screen, App Store Connect destination, and localization data). Version
+1.5 stores all locales in the same project file: the base `locale`, additional
+`extraLocales`, and each text overlay's `localizations`. Do not create one
+project file per language or expect locale-suffixed project copies.
+
+The first launch migrates projects from the old
+`~/Documents/Screenshot Studio/` location into Application Support without
+overwriting files that already exist. It also combines legacy
+`<Project Name> <locale>.json` files into the canonical `<Project Name>.json`
+and leaves the old files available as a recovery source. Re-opening a project
+re-reads its source folder, so a new capture there is picked up automatically.
+
+For localized galleries, keep one Screenshot Studio project and add the target
+locales in its localization controls. Export creates one locale subfolder per
+locale when more than one is configured; upload publishes every configured
+locale in one action. The screenshot source folder is still the folder imported
+by that project (`iPhone/` and `iPad/`).
 
 ### Re-render headlessly
 
