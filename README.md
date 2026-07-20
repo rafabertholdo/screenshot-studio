@@ -67,8 +67,8 @@ What a good capture run gives you:
   ```
 
 - **Numbered, matching filenames.** The `NN-` prefix (`01-`, `02-`, …) sets the
-  gallery order, and the shared name after it (`-Editor`) is how Screenshot Studio
-  pairs the iPhone and iPad shot of the same screen into one captioned slide.
+  gallery order. Keep the shared name after it (`-Editor`) when the same screen
+  exists on both families so the independent iPhone and iPad decks stay aligned.
 - **A consistent appearance.** Pick light or dark and stick to it across every
   screen — a mixed gallery reads as broken in the store. Lock it in the app (e.g.
   `.preferredColorScheme(.dark)`) or force the simulator before the run
@@ -96,8 +96,9 @@ instead of repeating one. You can change any screen's look afterward.
 ![New Project — name, template picker, and screenshots folder](docs/app-new-project.jpg)
 
 Then **import** the folder that holds your `iPhone/` and `iPad/` subfolders.
-Screenshot Studio pairs the shots by their numbered name and builds one **slide**
-per screen, ordered by the `NN-` prefix.
+Screenshot Studio builds an independent **slide deck** for each family, ordered
+by the `NN-` prefix. Matching names keep corresponding screens aligned, but the
+iPhone and iPad decks are never merged.
 
 ### Frame, caption, and arrange each slide
 
@@ -112,14 +113,16 @@ Select a slide in the sidebar and work on the canvas:
 - **Placement** — move and scale the device on the canvas. If a screen's UI stops
   partway down, push the device lower so the empty space runs off the bottom edge.
 - **Background** — switch the template/gradient behind the device per slide.
-- **Preview both sizes** — toggle between the iPhone and iPad rendering. A screen
-  captured for only one size falls back gracefully.
+- **Switch device decks** — the iPhone/iPad tab changes the entire editor context,
+  including the left pane, canvas, sidebar, and export settings. Styling is
+  independent per family. A screen captured for only one size appears only in
+  that family’s deck; it never falls back to the other device’s screenshot.
 
 Projects are saved automatically as one small JSON file per project in
 `~/Library/Application Support/screenshot-studio/`. The file stores the source
 folder path, screen styling, App Store Connect destination, and all
 localization data; screenshots themselves stay in the source folder. Version
-1.5 keeps the base locale, extra locales, and translated text overlays together
+1.6 keeps the base locale, extra locales, and translated text overlays together
 in the same project file, so localized galleries do not need one project per
 language.
 

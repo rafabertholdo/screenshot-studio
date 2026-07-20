@@ -1,6 +1,6 @@
 {
   "name": "screenshot-studio-skill",
-  "version": "1.0.0",
+  "version": "1.6.0",
   "description": "Agent skill that automates App Store screenshots with Screenshot Studio.",
   "keywords": [
     "pi-package",

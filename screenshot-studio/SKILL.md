@@ -25,9 +25,10 @@ screenshots/<app>/
 
 Naming rules that the rest of the pipeline depends on:
 
-- **`NN-Name.png`** — the zero-padded `NN` (01, 02, …) sets gallery order; the
-  `Name` after it pairs the iPhone and iPad shot of the same screen into one
-  captioned slide. Keep the same `Name` across both families.
+- **`NN-Name.png`** — the zero-padded `NN` (01, 02, …) sets gallery order; keep
+  the same `Name` across both families when the same screen exists on iPhone and
+  iPad, so the independent decks stay aligned. The families are not merged into
+  one editable slide.
 - **One appearance.** Pick light or dark and use it on every screen — a mixed
   gallery reads as broken in the store.
 
@@ -118,7 +119,7 @@ from https://github.com/rafabertholdo/screenshot-studio.
 1. **New Project** → pick a **template** (the background/mockup style new screens
    start from — you can restyle any screen afterward).
 2. **Choose Folder** → the folder holding your `iPhone/` and `iPad/` subfolders.
-   Studio pairs the shots by `NN-Name` into one slide per screen, in order.
+   Studio creates one independent slide deck per family, ordered by `NN-Name`.
 3. **Per slide**, on the canvas:
    - **Caption** — a short headline + subtitle (headlines don't wrap; keep them
      tight). Drag to position; snap guides align them across slides.
@@ -126,7 +127,10 @@ from https://github.com/rafabertholdo/screenshot-studio.
    - **Placement** — move/scale the device. If a screen's UI stops partway down,
      push the device lower so the empty space runs off the bottom edge.
    - **Background** — the gradient/template behind the device.
-4. **Preview** both iPhone and iPad renderings.
+4. **Switch** between the iPhone and iPad tabs. The tab changes the entire editor
+   context, including the left pane, canvas, sidebar, and export settings. Style
+   each family independently; missing captures never fall back to the other
+   family.
 5. **Export** — writes finished PNGs into `iPhone/` and `iPad/` at exact App Store
    sizes. **Don't resize or post-process the output** — App Store Connect
    validates the exact dimensions.
@@ -134,7 +138,7 @@ from https://github.com/rafabertholdo/screenshot-studio.
 Projects save as one small JSON file per project in
 `~/Library/Application Support/screenshot-studio/` (a folder path, the look of
 each screen, App Store Connect destination, and localization data). Version
-1.5 stores all locales in the same project file: the base `locale`, additional
+1.6 stores all locales in the same project file: the base `locale`, additional
 `extraLocales`, and each text overlay's `localizations`. Do not create one
 project file per language or expect locale-suffixed project copies.
 
@@ -179,7 +183,9 @@ UITest, then re-render — the styling you already did is reapplied to fresh sho
 - **Exact sizes are enforced** — never resize the exported PNGs.
 - **10 per size is a hard cap.** A **landscape** screen renders as two portrait
   panels side by side and spends **2** of those slots.
-- **Match `Name` across families** or the iPhone/iPad shots won't pair.
+- **Keep `Name` consistent across families** when corresponding screens exist so
+  the two independent decks remain aligned. A family may also contain screens
+  that are absent from the other family.
 - **Don't render back into the source `screenshots/` folder** — framing
   already-framed shots on the next import destroys the originals. Export elsewhere.
 - **Upload only to an editable version** (`PREPARE_FOR_SUBMISSION`,
