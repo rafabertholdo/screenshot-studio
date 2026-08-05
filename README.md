@@ -121,10 +121,9 @@ Select a slide in the sidebar and work on the canvas:
 Projects are saved automatically as one small JSON file per project in
 `~/Library/Application Support/screenshot-studio/`. The file stores the source
 folder path, screen styling, App Store Connect destination, and all
-localization data; screenshots themselves stay in the source folder. Version
-1.6 keeps the base locale, extra locales, and translated text overlays together
-in the same project file, so localized galleries do not need one project per
-language.
+localization data; screenshots themselves stay in the source folder. The base
+locale, extra locales, and translated text overlays stay together in the same
+project file, so localized galleries do not need one project per language.
 
 On first launch, projects are migrated non-destructively from the old
 `~/Documents/Screenshot Studio/` folder. Legacy locale-suffixed project files

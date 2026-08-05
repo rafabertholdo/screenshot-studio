@@ -131,16 +131,20 @@ from https://github.com/rafabertholdo/screenshot-studio.
    context, including the left pane, canvas, sidebar, and export settings. Style
    each family independently; missing captures never fall back to the other
    family.
-5. **Export** — writes finished PNGs into `iPhone/` and `iPad/` at exact App Store
-   sizes. **Don't resize or post-process the output** — App Store Connect
-   validates the exact dimensions.
+5. **Choose the export size for each family** in the sidebar before exporting.
+   Screenshot Studio supports iPhone 6.1\", 6.3\", 6.5\", and 6.9\", plus iPad
+   12.9\" and 13\". Select the App Store display size you intend to upload;
+   iPhone and iPad settings are independent.
+6. **Export** — writes finished PNGs into `iPhone/` and `iPad/` at the selected,
+   exact App Store sizes. **Don't resize or post-process the output** — App Store
+   Connect validates the exact dimensions.
 
 Projects save as one small JSON file per project in
 `~/Library/Application Support/screenshot-studio/` (a folder path, the look of
-each screen, App Store Connect destination, and localization data). Version
-1.6 stores all locales in the same project file: the base `locale`, additional
-`extraLocales`, and each text overlay's `localizations`. Do not create one
-project file per language or expect locale-suffixed project copies.
+each screen, App Store Connect destination, and localization data). All locales
+live in the same project file: the base `locale`, additional `extraLocales`, and
+each text overlay's `localizations`. Do not create one project file per language
+or expect locale-suffixed project copies.
 
 The first launch migrates projects from the old
 `~/Documents/Screenshot Studio/` location into Application Support without
